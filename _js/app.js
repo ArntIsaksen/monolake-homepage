@@ -17,6 +17,7 @@ function showWhite(){
     var audio = $(".superhans")[0];
     $(".white").fadeIn("fast");
     audio.pause();
+    $("#email").css({"color":"black"});
 }
 
 function hideWhite(){
@@ -24,5 +25,5 @@ function hideWhite(){
     audio.addEventListener('ended', function(){this.currentTime = 0;}, false);
     $(".white").fadeOut("fast");
     audio.play();
-    echo("white hidden");
+    $("#email").css({"color":"white"});
 }
